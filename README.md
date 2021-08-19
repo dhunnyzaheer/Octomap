@@ -18,7 +18,7 @@ Need to add sensor which generates point cloud data
 
 ## Husky Robot from Clearpath robotics
 
-To make use of the octomap using the Husky, a sensor proding point cloud data needs to be added. In this example, the the Husky is equipped with an Intel RealSense D435 camera. See https://www.clearpathrobotics.com/assets/guides/kinetic/husky/additional_sim_worlds.html to find out how to add the sensor. 
+To make use of the octomap using the Husky, a sensor producing 3D point cloud data needs to be added. In this example, the the Husky is equipped with an Intel RealSense D435 camera. See https://www.clearpathrobotics.com/assets/guides/kinetic/husky/additional_sim_worlds.html to find out how to add the sensor. 
 
 Open the terminal
 
