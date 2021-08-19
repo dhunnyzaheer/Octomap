@@ -14,7 +14,7 @@ Add Marker Array in Rviz and change the Marker topic to /occupied_cells_vis_arra
 
 ## Turtlebot3
 
-Need to add sensor whic generates point cloud data
+Need to add sensor which generates point cloud data
 
 ## Husky Robot from Clearpath robotics
 
@@ -22,7 +22,9 @@ To make use of the octomap using the Husky, a sensor proding point cloud data ne
 
 Open the terminal
 
->  roslaunch husky_gazebo husky_playpen.launch
+> export HUSKY_URDF_EXTRAS=$HOME/Desktop/realsense.urdf.xacro
+
+> roslaunch husky_gazebo husky_playpen.launch
 
 > roslaunch octomap_server octomap_mapping.launch
 
@@ -32,14 +34,30 @@ Add Marker Array in Rviz and change the Marker topic to /occupied_cells_vis_arra
 
 Add robot model 
 
+> rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/husky_velocity_controller/cmd_vel
+
+> rosrun map_server map_saver -f ~/map
+
 ## Build a map using rosbag
 
 - Get rosbag file (In this example, I downloaded the 'freiburg2_pioneer_360' sequence from https://vision.in.tum.de/data/datasets/rgbd-dataset/download)
+
+> roscore
+
+- Edit octomap_mapping launch file where appropriate
 
 - Start Octomap
 
 > roslaunch octomap_server octomap_mapping.launch
 
+- Open Rviz and add Markey array with topic /occupied_cells_vis_array.
+
+> rosrun rviz rviz
+
 - Play data
 
-> rosbag play dataset.bag  --clock
+> rosbag play test.bag  --clock
+
+![Rviz](https://github.com/dhunnyzaheer/Hector-SLAM/blob/main/images/rviz_hector_rosbag.png)
+
+![Map](https://github.com/dhunnyzaheer/Hector-SLAM/blob/main/images/map.pgm)
