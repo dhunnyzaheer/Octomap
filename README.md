@@ -38,6 +38,8 @@ Add robot model
 
 > rosrun map_server map_saver -f ~/map
 
+![husky_robot_octomap](https://github.com/dhunnyzaheer/Octomap/blob/main/images/husky_robot_octomap.png)
+
 ## Build a map using rosbag
 
 - Get rosbag file (In this example, I downloaded the 'freiburg2_pioneer_360' sequence from https://vision.in.tum.de/data/datasets/rgbd-dataset/download)
@@ -58,6 +60,4 @@ Add robot model
 
 > rosbag play test.bag  --clock
 
-![Rviz](https://github.com/dhunnyzaheer/Hector-SLAM/blob/main/images/rviz_hector_rosbag.png)
-
-![Map](https://github.com/dhunnyzaheer/Hector-SLAM/blob/main/images/map.pgm)
+![rviz_octomap_rosbag](https://github.com/dhunnyzaheer/Octomap/blob/main/images/rviz_octomap_rosbag.png)
