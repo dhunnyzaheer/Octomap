@@ -60,4 +60,6 @@ Add robot model
 
 > rosbag play test.bag  --clock
 
-![rviz_octomap_rosbag](https://github.com/dhunnyzaheer/Octomap/blob/main/images/rviz_octomap_rosbag.png)
+![rviz_octomap_rosbag1](https://github.com/dhunnyzaheer/Octomap/blob/main/images/rosbag_octomap1.png)
+
+![rviz_octomap_rosbag2](https://github.com/dhunnyzaheer/Octomap/blob/main/images/rosbag_octomap2.png)
