@@ -22,21 +22,33 @@ To make use of the octomap using the Husky, a sensor producing 3D point cloud da
 
 Open the terminal
 
-> export HUSKY_URDF_EXTRAS=$HOME/Desktop/realsense.urdf.xacro
+```
+export HUSKY_URDF_EXTRAS=$HOME/Desktop/realsense.urdf.xacro
+```
 
-> roslaunch husky_gazebo husky_playpen.launch
+```
+roslaunch husky_gazebo husky_playpen.launch
+```
 
-> roslaunch octomap_server octomap_mapping.launch
+```
+roslaunch octomap_server octomap_mapping.launch
+```
 
-> rosrun rviz rviz
+```
+rosrun rviz rviz
+```
 
 Add Marker Array in Rviz and change the Marker topic to /occupied_cells_vis_array.
 
 Add robot model 
 
-> rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/husky_velocity_controller/cmd_vel
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/husky_velocity_controller/cmd_vel
+```
 
-> rosrun map_server map_saver -f ~/map
+```
+rosrun map_server map_saver -f ~/map
+```
 
 ![husky_robot_octomap](https://github.com/dhunnyzaheer/Octomap/blob/main/images/husky_robot_octomap.png)
 
@@ -44,21 +56,29 @@ Add robot model
 
 - Get rosbag file (In this example, I downloaded the 'freiburg2_pioneer_360' sequence from https://vision.in.tum.de/data/datasets/rgbd-dataset/download)
 
-> roscore
+```
+roscore
+```
 
 - Edit octomap_mapping launch file where appropriate
 
 - Start Octomap
 
-> roslaunch octomap_server octomap_mapping.launch
+```
+roslaunch octomap_server octomap_mapping.launch
+```
 
 - Open Rviz and add Markey array with topic /occupied_cells_vis_array.
 
-> rosrun rviz rviz
+```
+rosrun rviz rviz
+```
 
 - Play data
 
-> rosbag play test.bag  --clock
+```
+rosbag play test.bag --clock
+```
 
 ![rviz_octomap_rosbag1](https://github.com/dhunnyzaheer/Octomap/blob/main/images/rosbag_octomap1.png)
 
