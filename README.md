@@ -2,13 +2,26 @@
 
 For installation intructions, go to http://wiki.ros.org/octomap_mapping
 
+```
+sudo apt-get install ros-melodic-octomap ros-melodic-octomap-mapping
+```
+
 ## Using Octomap_mapping package
 
 Go to octomap_mapping.launch file and make changes to the file where appropriate.
 
+```
+roscd octomap_server/launch
+sudo nano octomap_mapping.launch
+```
+
 Use rostopic list to find topics.
 
 Launch the octomap_mapping launch file using roslaunch.
+
+```
+roslaunch octomap_server octomap_mapping.launch
+```
 
 Add Marker Array in Rviz and change the Marker topic to /occupied_cells_vis_array.
 
